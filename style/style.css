@@ -1,3 +1,18 @@
-*{
-    background-color: #fbffe8;
+body {
+    font-size: medium;
+    color: rgb(76, 76, 76);
+}
+
+
+.button-accessibility{
+    background: orange;
+    border: 0.06em black solid;
+    cursor: pointer;
+    border-radius: 0.2em;
+}
+
+
+.button-accessibility:active {  
+    background-color: orangered;
+    transform: translateY(0.01em);
 }
