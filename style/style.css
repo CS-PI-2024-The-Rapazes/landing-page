@@ -1,3 +1,188 @@
-*{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     background-color: #fbffe8;
+    font-family: Arial, sans-serif;
+}
+
+.top-bar {
+    background-color: #88606D;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 250px;
+    right: 0;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    z-index: 1000;
+    border-bottom: 2px solid  rgba(0, 0, 0, 0.5);
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.top-bar nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.top-bar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.top-bar nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.side-bar {
+    background-color: #88606D;
+    color: #000000;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 999;
+    transition: left 0.3s ease;
+}
+
+.side-bar .container {
+    padding: 20px;
+}
+
+.side-bar h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.side-bar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.side-bar ul li {
+    margin-bottom: 10px;
+}
+
+.side-bar ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.side-bar ul li a:hover {
+    text-decoration: underline;
+}
+
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.toggle-btn {
+    display: none;
+}
+
+.toggle-btn img {
+    width: 20px;
+    height: 20px; 
+    border-radius: 50%;
+}
+
+.main-content {
+    margin-left: 270px;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+        left: 0;
+    }
+
+    .top-bar .logo {
+        text-align: center;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .top-bar nav {
+        display: none;
+    }
+
+    .side-bar {
+        width: 250px;
+        left: -250px;
+    }
+
+    .side-bar.active {
+        left: 0;
+    }
+
+    .toggle-btn {
+        display: block;
+    }
+
+    .main-content {
+        margin-left: 0;
+        transition: margin-left 0.3s ease;
+    }
+
+    .overlay.active {
+        display: block;
+    }
+
+    .toggle-btn {
+        display: block;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        z-index: 1000;
+    }
+    
 }
