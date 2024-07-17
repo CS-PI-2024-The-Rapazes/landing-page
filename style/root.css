@@ -1,7 +1,7 @@
 :root {
-    --background-color: #fbffe8;
-    --primary-color: #88606D;
+    --background-light: #FDF7F9;
+    --background-dark: #232323;
+    --details-color: #F6A9C3;
     --secondary-color: #fff;
-    --text-color: #000;
-    --border-color: rgba(0, 0, 0, 0.5);
+    --text-color: #000001;
 }

@@ -35,12 +35,12 @@
     flex-direction: column;
     width: 320px;
     height: 460px;
-    border: 1px solid var(--text-gold);
+    border: 1px solid var(--details-color);
     border-radius: 16px;
 }
 
 .card:hover {
-    background-color: rgba(255, 215, 0, 0.1);
+    background-color: var(--details-color);
     transition: background-color 0.6s ease-in-out;
 }
 
@@ -59,7 +59,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 21px;
-    color: rgb(255, 255, 255);
+    color: var(--text-color);
     opacity: 0.5;
 }
 
