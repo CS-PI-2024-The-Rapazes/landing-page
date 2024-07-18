@@ -8,8 +8,7 @@
 .planos.conteudo {
   display: flex;
   justify-content: space-between;
-  -webkit-box-pack: center;
-  justify-content: center;
+  justify-content: center;  
   gap: 48px;
   margin-top: 50px;
   flex-wrap: wrap;
@@ -31,11 +30,10 @@
   align-items: flex-start;
   justify-content: space-between;
   flex-direction: column;
-  width: 300px;
-  height: 500px;
+  width: 350px;
+  height: 550px;
   border-radius: 20px;
-  border: 0 solid var(--main-color);
-  border-color: rgba(201, 201, 201, 0.2) !important;
+  border: 0 solid;
   box-shadow: var(--tw-shadow);
   transition: background 0.6s ease-in-out;
 }

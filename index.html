@@ -1,115 +1,121 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="description" content="Landing Page do produto Salgados" />
-    <link rel="stylesheet" href="style/style.css" />
-    <link rel="stylesheet" href="style/cards.css" />
 
-    <title>PlaceHolder</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Landing Page do produto Salgados" />
+  <link rel="stylesheet" href="style/style.css" />
+  <link rel="stylesheet" href="style/cards.css" />
 
-  <body>
-    <header class="top-bar">
+  <title>PlaceHolder</title>
+</head>
+
+<body>
+  <header class="top-bar">
+    <div class="container">
+      <h1 class="logo">MeuSite</h1>
+      <button class="menu-toggle" id="menu-toggle">☰</button>
+      <nav class="navigation" id="nav">
+        <ul>
+          <li><a href="#home">Inicio</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#equipe">Equipe</a></li>
+          <li><a href="#planos">Preços</a></li>
+          <li>
+            <a class="dropdown-botao" id="dropdownBotao">Ajuda ▼</a>
+            <div class="dropdown-conteudo" id="dropdownConteudo">
+              <ul>
+                <li><a href="#">opção 1</a></li>
+                <li><a href="#">opção 2</a></li>
+                <li><a href="#">opção 3</a></li>
+                <li><a href="#">opção 4</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="sobre" class="section">
       <div class="container">
-        <h1 class="logo">MeuSite</h1>
-        <button class="menu-toggle" id="menu-toggle">☰</button>
-        <nav class="navigation" id="nav">
-          <ul>
-            <li><a href="#home">Inicio</a></li>
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#equipe">Equipe</a></li>
-            <li><a href="#services">Preços</a></li>
-            <li>
-              <a class="dropdown-botao" id="dropdownBotao"> Ajuda</a>
-              <div class="dropdown-conteudo" id="dropdownConteudo">
-                <ul>
-                  <li><a href="#">opção 1</a></li>
-                  <li><a href="#">opção 2</a></li>
-                  <li><a href="#">opção 3</a></li>
-                  <li><a href="#">opção 4</a></li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </nav>
+        <h2>Sobre o Produto</h2>
+        <p>Aqui vai uma descrição clara e concisa do seu produto.</p>
+        <p>Inclua screenshots ou vídeos demonstrativos para ilustrar.</p>
       </div>
-    </header>
+    </section>
 
-    <main>
-      <section id="sobre" class="section">
-        <div class="container">
-          <h2>Sobre o Produto</h2>
-          <p>Aqui vai uma descrição clara e concisa do seu produto.</p>
-          <p>Inclua screenshots ou vídeos demonstrativos para ilustrar.</p>
-        </div>
-      </section>
+    <section id="planos" class="section">
+      <div class="titulo">
+        <h2>Planos e Preços</h2>
+        <span class="separador"></span>
+        <p class="subtitulo">
+          Veja nossos planos disponíveis e escolha o melhor para você.
+        </p>
+      </div>
 
-      <section id="contato" class="section">
-        <div class="container">
-          <h2>Contato e Suporte</h2>
-          <p>
-            Entre em contato conosco para esclarecer dúvidas ou obter suporte.
-          </p>
-          <p>Use o formulário abaixo ou encontre-nos nas redes sociais.</p>
-        </div>
-      </section>
-
-      <section id="planos" class="section">
-        <div class="card-valores">
-          <div class="titulo">
-            <h2>Planos e Preços</h2>
-            <span class="separador"></span>
-            <p class="subtitulo">
-              Veja nossos planos disponíveis e escolha o melhor para você.
-            </p>
-          </div>
-
-          <div class="planos conteudo">
-            <!-- CARDS Valores-->
-            <div class="card">
-              <div class="conteudo">
-                <div class="info">
-                  <h5>Plano: Gratis</h5>
-                  <p>plano para os pobres</p>
-                </div>
-                <div></div>
-              </div>
+      <div class="planos conteudo">
+        <!-- CARDS Valores-->
+        <div class="card">
+          <div class="conteudo">
+            <div class="info">
+              <h5>Plano: Gratis</h5>
+              <p>plano para os pobres</p>
             </div>
-
-            <div class="card">
-              <div class="conteudo">
-                <div class="info">
-                  <h5>Plano: Premium</h5>
-                  <p>para os ricos</p>
-                </div>
-                <div></div>
-              </div>
-            </div>
+            <div></div>
           </div>
         </div>
-      </section>
 
-      <section id="equipe" class="section">
-        <div class="container">
-          <h2>Sobre a Equipe</h2>
-          <p>Conheça os desenvolvedores por trás do nosso produto.</p>
+        <div class="card">
+          <div class="conteudo">
+            <div class="info">
+              <h5>Plano: Premium</h5>
+              <p>para os ricos</p>
+            </div>
+            <div></div>
+          </div>
         </div>
-      </section>
-    </main>
-    <footer>
+      </div>
+    </section>
+
+    <section id="equipe" class="section">
       <div class="container">
-        <p>&copy; 2024 Nome da Equipe - Todos os direitos reservados</p>
+        <h2>Sobre a Equipe</h2>
+        <p>Conheça os desenvolvedores por trás do nosso produto.</p>
       </div>
+    </section>
 
-      <div class="redes-sociais">
-        <p>teste</p>
+    <section id="contato" class="section">
+      <div class="container">
+        <h2>Contato e Suporte</h2>
+        <p>
+          Entre em contato conosco para esclarecer dúvidas ou obter suporte.
+        </p>
+        <p>Use o formulário abaixo ou encontre-nos nas redes sociais.</p>
       </div>
-    </footer>
+    </section>
+  </main>
+  <footer id="footer">
+    <div class="footerDivisao">
+      <h3>Redes Sociais 1</h3>
+      <p>Conteúdo da primeira seção do footer.</p>
+    </div>
 
-    <script src="src/app/pages/team-description/team-description.js"></script>
-    <script src="src/app/pages/index/index.js"></script>
-  </body>
+    <div class="footerDivisao">
+      <p>&copy; 2024 Nome da Equipe - Todos os direitos reservados</p>
+    </div>
+
+    <div class="footerDivisao">
+      <h3>Outra Coisa - Titulo</h3>
+      <p>Teste</p>
+    </div>
+  </footer>
+
+  <script src="src/app/pages/team-description/team-description.js"></script>
+  <script src="src/app/pages/index/index.js"></script>
+</body>
+
 </html>
