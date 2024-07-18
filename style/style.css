@@ -189,9 +189,6 @@ body {
     }
 
 }
-*{
-    background-color: #fbffe8;
-}
 
 root {
     box-sizing: border-box;
@@ -205,7 +202,7 @@ body {
     overflow: hidden;
 }
 
-.footer {
+.contato-button-div {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -219,7 +216,7 @@ body {
     gap: 0.2rem;
 }
 
-.button-1 {
+.contato-button {
     border-radius: 50px;
     border-style: none;
     color: #FFFFFF;
