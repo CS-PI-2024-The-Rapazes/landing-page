@@ -1,0 +1,74 @@
+@import url('style.css');
+
+@media (max-width: 770px) {
+    main {
+        margin-left: 0;
+        transition: margin-left 0.3s ease;
+    }
+
+    .top-bar {
+        left: 0;
+    }
+
+    .top-bar .logo {
+        text-align: center;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .top-bar nav {
+        display: none;
+    }
+
+    .top-bar nav ul li a:hover {
+        padding-bottom: 10px;
+        border-bottom: 2px solid #fff;
+    }
+
+    .navigation {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: var(--main-color);
+        width: 100%;
+        top: 100%;
+        left: 0;
+        padding: 1rem;
+        border-radius: 0px 0px 10px 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        transition: all 0.4s ease;
+    }
+
+    .navigation ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .navigation.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .dropdown-conteudo {
+        width: 150px;
+        left: 0;
+        border-radius: 0px 0px 10px 10px;
+    }
+
+    .planos.conteudo {
+        -webkit-box-pack: start;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        gap: 16px;
+        padding-right: 64px;
+        padding-left: 20px;
+        margin-bottom: 24px;
+    }
+}

@@ -60,16 +60,3 @@
   color: var(--main-color);
   opacity: 0.5;
 }
-
-@media only screen and (max-width: 770px) {
-  .planos.conteudo {
-    -webkit-box-pack: start;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    overflow-x: scroll;
-    gap: 16px;
-    padding-right: 64px;
-    padding-left: 20px;
-    margin-bottom: 24px;
-  }
-}

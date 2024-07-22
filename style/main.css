@@ -30,11 +30,11 @@ main {
 }
 
 .top-bar {
-  background-color: var(--main-color);
-  padding: 30px;
+  top: 0;
   width: 100%;
   position: sticky;
-  top: 0;
+  padding: 20px 10px 20px 10px;
+  background-color: var(--main-color);
 }
 
 .top-bar .container {
@@ -55,7 +55,7 @@ main {
 
 .top-bar nav ul li {
   display: inline-block;
-  padding: 0px 5px;
+  padding-left: 15px;
 }
 
 .top-bar nav ul li a {
@@ -63,12 +63,8 @@ main {
 }
 
 .top-bar nav ul li a:hover {
-  color: var(--text-color-dark);
-  transition: color 0.1s ease-in;
-  border-bottom: 2px solid #f5f5f5;
-  /* Linha abaixo do link */
-  padding: 0px 0px 2.5px 0px;
-  /* Espaçamento entre a linha e o texto */
+  padding-bottom: 25px;
+  border-bottom: 2px solid #fff
 }
 
 .top-bar.shadow {
@@ -112,13 +108,12 @@ main {
 .dropdown-conteudo {
   display: none;
   position: absolute;
-  background-color: var(--main-color);
   width: 150px;
   z-index: 1;
-  border-radius: 5px;
   top: 100%;
   right: 0;
-  margin-top: 5px;
+  border-radius: 0px 0px 10px 10px;
+  background-color: var(--main-color);
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -145,75 +140,17 @@ main {
   justify-content: space-around;
 }
 
-.footerDivisoes {
+.footer-divisoes {
   flex: 1;
   text-align: center;
 }
 
-.footerDivisoes h3 {
+.footer-divisoes h3 {
   font-size: 18px;
   margin-bottom: 10px;
 }
 
-.footerDivisoes p {
+.footer-divisoes p {
   font-size: 14px;
   line-height: 1.6;
-}
-
-@media (max-width: 768px) {
-  main {
-    margin-left: 0;
-    transition: margin-left 0.3s ease;
-  }
-
-  .top-bar {
-    left: 0;
-  }
-
-  .top-bar .logo {
-    text-align: center;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .top-bar nav {
-    display: none;
-  }
-
-  .top-bar nav ul li a:hover {
-    border-bottom: 2px solid #f5f5f5;
-    /* Linha abaixo do link */
-    padding: 0px 0px 2.5px 0px;
-    /* 2.5 Espaçamento entre a linha e o texto*/
-  }
-
-  .navigation {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 6.5rem;
-    right: 0px;
-    background-color: var(--main-color);
-    width: 100%;
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: all 0.4s ease;
-  }
-
-  .navigation ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-
-  .navigation.active {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
 }
