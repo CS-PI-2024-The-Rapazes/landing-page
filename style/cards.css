@@ -8,7 +8,7 @@
 .planos.conteudo {
   display: flex;
   justify-content: space-between;
-  justify-content: center;  
+  justify-content: center;
   gap: 48px;
   margin-top: 50px;
   flex-wrap: wrap;
@@ -59,4 +59,9 @@
   line-height: 21px;
   color: var(--main-color);
   opacity: 0.5;
+}
+
+#plano-normal-btn,
+#plano-premium-btn {
+  display: none;
 }

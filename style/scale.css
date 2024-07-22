@@ -51,6 +51,7 @@
         display: flex;
     }
 
+    /* botão toggle - 'ajuda' */
     .menu-toggle {
         display: block;
     }
@@ -61,14 +62,26 @@
         border-radius: 0px 0px 10px 10px;
     }
 
+    /* Card */
     .planos.conteudo {
         -webkit-box-pack: start;
         justify-content: flex-start;
-        flex-wrap: nowrap;
-        overflow-x: scroll;
         gap: 16px;
         padding-right: 64px;
         padding-left: 20px;
         margin-bottom: 24px;
+    }
+
+    .tipos-btn {
+        right: 0;
+    }
+
+    #plano-normal-btn,
+    #plano-premium-btn {
+        display: inline;
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+
     }
 }

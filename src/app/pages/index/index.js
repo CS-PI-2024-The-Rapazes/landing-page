@@ -35,3 +35,27 @@ window.addEventListener("scroll", function () {
     topBar.classList.remove("shadow");
   }
 });
+
+document.getElementById('plano-normal-btn').addEventListener('click', function () {
+  var cardNormal = document.getElementById('plano-normal');
+  var cardPremium = document.getElementById('plano-premium');
+
+  if (cardNormal.style.display === 'none') {
+    cardNormal.style.display = 'block';
+    cardPremium.style.display = 'none';
+  } else {
+    cardNormal.style.display = 'none';
+  }
+});
+
+document.getElementById('plano-premium-btn').addEventListener('click', function () {
+  var cardNormal = document.getElementById('plano-normal');
+  var cardPremium = document.getElementById('plano-premium');
+
+  if (cardPremium.style.display === 'none') {
+    cardPremium.style.display = 'block';
+    cardNormal.style.display = 'none';
+  } else {
+    cardPremium.style.display = 'none';
+  }
+});
