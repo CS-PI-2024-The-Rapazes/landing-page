@@ -5,7 +5,7 @@
   padding-bottom: 80px;
 }
 
-.planos.conteudo {
+.planos {
   display: flex;
   justify-content: space-between;
   justify-content: center;
@@ -15,7 +15,6 @@
 }
 
 .card .conteudo {
-  display: flex;
   align-items: flex-start;
   -webkit-box-pack: justify;
   justify-content: space-between;
@@ -26,7 +25,6 @@
 
 .card {
   cursor: pointer;
-  display: flex;
   align-items: flex-start;
   justify-content: space-between;
   flex-direction: column;
@@ -61,7 +59,11 @@
   opacity: 0.5;
 }
 
-#plano-normal-btn,
-#plano-premium-btn {
+#plano-premium,
+.plano-normal {
+  display: block;
+}
+
+#btn-plano {
   display: none;
 }

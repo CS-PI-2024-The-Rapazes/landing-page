@@ -36,26 +36,35 @@ window.addEventListener("scroll", function () {
   }
 });
 
-document.getElementById('plano-normal-btn').addEventListener('click', function () {
-  var cardNormal = document.getElementById('plano-normal');
-  var cardPremium = document.getElementById('plano-premium');
 
-  if (cardNormal.style.display === 'none') {
-    cardNormal.style.display = 'block';
-    cardPremium.style.display = 'none';
-  } else {
-    cardNormal.style.display = 'none';
-  }
-});
+function modificaCard() {
+  document.getElementById('btn-plano').addEventListener('click', function () {
+    var cardNormal = document.getElementById('plano-normal');
+    var cardPremium = document.getElementById('plano-premium');
+    var btnText = document.getElementById('btn-plano');
 
-document.getElementById('plano-premium-btn').addEventListener('click', function () {
-  var cardNormal = document.getElementById('plano-normal');
-  var cardPremium = document.getElementById('plano-premium');
+    if (cardNormal.style.display === 'none') {
+      cardNormal.style.display = 'block';
+      cardPremium.style.display = 'none';
+      btnText.textContent = 'Selecionar Plano Premium';
+    } else {
+      cardNormal.style.display = 'none';
+      cardPremium.style.display = 'block';
+      btnText.textContent = 'Selecionar Plano Padrão';
+    }
+    window.addEventListener('resize', function () {
+      // Pega o tamanho da tela
+      var largura = window.innerWidth;
+      var altura = window.innerHeight;
 
-  if (cardPremium.style.display === 'none') {
-    cardPremium.style.display = 'block';
-    cardNormal.style.display = 'none';
-  } else {
-    cardPremium.style.display = 'none';
-  }
-});
+      if (largura >= 770) {
+        cardNormal.style.display = 'block';
+        cardPremium.style.display = 'block';
+      }
+
+    });
+  });
+}
+
+modificaCard();
+
