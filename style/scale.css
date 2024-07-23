@@ -76,14 +76,27 @@
         display: none;
     }
 
+    #tipos-btn {
+        position: absolute;
+        z-index: 1;
+
+    }
+
     #btn-plano {
-        cursor: pointer;
         display: flex;
+        cursor: pointer;
         border: 1px solid var(--main-color);
         border-radius: 10px;
         background: transparent;
-        justify-content: center;
-        align-items: center;
         padding: 10px;
+        font: bold;
+        font-size: 14px;
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    #btn-plano:hover {
+        background-color: var(--main-color);
+        color: var(--text-color-dark);
     }
 }

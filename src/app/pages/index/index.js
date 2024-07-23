@@ -46,11 +46,11 @@ function modificaCard() {
     if (cardNormal.style.display === 'none') {
       cardNormal.style.display = 'block';
       cardPremium.style.display = 'none';
-      btnText.textContent = 'Selecionar Plano Premium';
+      btnText.textContent = 'Plano: Premium';
     } else {
       cardNormal.style.display = 'none';
       cardPremium.style.display = 'block';
-      btnText.textContent = 'Selecionar Plano Padrão';
+      btnText.textContent = 'Plano: Padrão';
     }
     window.addEventListener('resize', function () {
       // Pega o tamanho da tela

@@ -24,6 +24,7 @@
 }
 
 .card {
+  margin-top: 50px;
   cursor: pointer;
   align-items: flex-start;
   justify-content: space-between;
@@ -59,11 +60,7 @@
   opacity: 0.5;
 }
 
-#plano-premium,
-.plano-normal {
-  display: block;
-}
-
 #btn-plano {
+  opacity: 0;
   display: none;
 }
