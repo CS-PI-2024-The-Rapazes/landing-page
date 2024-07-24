@@ -1,0 +1,102 @@
+@import url('style.css');
+
+@media (max-width: 770px) {
+    main {
+        margin-left: 0;
+        transition: margin-left 0.3s ease;
+    }
+
+    .top-bar {
+        left: 0;
+    }
+
+    .top-bar .logo {
+        text-align: center;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .top-bar nav {
+        display: none;
+    }
+
+    .top-bar nav ul li a:hover {
+        padding-bottom: 10px;
+        border-bottom: 2px solid #fff;
+    }
+
+    .navigation {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: var(--main-color);
+        width: 100%;
+        top: 100%;
+        left: 0;
+        padding: 1rem;
+        border-radius: 0px 0px 10px 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        transition: all 0.4s ease;
+    }
+
+    .navigation ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .navigation.active {
+        display: flex;
+    }
+
+    /* botão toggle - 'ajuda' */
+    .menu-toggle {
+        display: block;
+    }
+
+    .dropdown-conteudo {
+        width: 150px;
+        left: 0;
+        border-radius: 0px 0px 10px 10px;
+    }
+
+    /* Card */
+    .planos.conteudo {
+        -webkit-box-pack: start;
+        justify-content: flex-start;
+        gap: 16px;
+        padding-right: 64px;
+        padding-left: 20px;
+        margin-bottom: 24px;
+    }
+
+    #plano-premium {
+        display: none;
+    }
+
+    #tipos-btn {
+        position: absolute;
+        z-index: -1;
+        
+    }
+
+    #btn-plano {
+        display: flex;
+        cursor: pointer;
+        border: 1px solid var(--main-color);
+        border-radius: 10px;
+        background: transparent;
+        padding: 10px;
+        font: bold;
+        font-size: 14px;
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    #btn-plano:hover {
+        background-color: var(--main-color);
+        color: var(--text-color-dark);
+    }
+}
