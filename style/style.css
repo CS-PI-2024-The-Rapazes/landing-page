@@ -12,16 +12,16 @@ body {
 
 
 .button-accessibility{
-    background: orange;
     border: 0.06em black solid;
     cursor: pointer;
+    background: var(--button-accessibility-color, transparent);
     border-radius: 0.2em;
     position: fixed;
     margin: auto;
     align-items: center;
     right: 1em;
     z-index: 10;
-    
+
 }
 
 .button-theme {
@@ -33,7 +33,7 @@ body {
 
 
 .button-accessibility:active {  
-    background-color: orangered;
+    background-color: rgb(243, 243, 243);
     transform: translateY(0.01em);
     position: fixed;
    
@@ -43,12 +43,14 @@ body {
     --background-body: #292828;
     --color-body: #fbf8fa;
     --sidebar-color: #353333;
+    --button-accessibility-color: #ddd7d7;
 }
 
 [data-tema="light-mode"] {
     --background-body: #ffffff;
     --color-body: #1d1d1d;
     --sidebar-color: #ddd7d7;
+    --button-accessibility-color: #ddd7d7;
 }
 
 .slider {
