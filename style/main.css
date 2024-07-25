@@ -154,3 +154,8 @@ main {
   font-size: 14px;
   line-height: 1.6;
 }
+
+.member-scrum {
+  background-color: var(--main-color);
+  padding: 15px;
+}
