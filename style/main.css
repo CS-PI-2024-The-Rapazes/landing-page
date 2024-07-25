@@ -29,6 +29,10 @@ main {
   padding: 0px 0px 0px 25px;
 }
 
+:focus {
+  outline: solid red;
+}
+
 .top-bar {
   top: 0;
   width: 100%;

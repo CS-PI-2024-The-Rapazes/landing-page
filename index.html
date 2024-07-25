@@ -20,18 +20,18 @@
       <button class="menu-toggle" id="menu-toggle">☰</button>
       <nav class="navigation" id="nav">
         <ul>
-          <li><a href="#home">Inicio</a></li>
-          <li><a href="#about">Sobre</a></li>
-          <li><a href="#equipe">Equipe</a></li>
-          <li><a href="#planos">Preços</a></li>
-          <li>
+          <li><a href="#home" tabindex="1">Inicio</a></li>
+          <li><a href="#about" tabindex="2">Sobre</a></li>
+          <li><a href="#equipe" tabindex="3">Equipe</a></li>
+          <li><a href="#planos" tabindex="4">Preços</a></li>
+          <li tabindex="5">
             <a class="dropdown-botao" id="dropdownBotao">Ajuda ▼</a>
             <div class="dropdown-conteudo" id="dropdownConteudo">
-              <ul>
-                <li><a href="#">opção 1</a></li>
-                <li><a href="#">opção 2</a></li>
-                <li><a href="#">opção 3</a></li>
-                <li><a href="#">opção 4</a></li>
+              <ul tabindex="6">
+                <li tabindex="7"><a href="#">opção 1</a></li>
+                <li tabindex="8"><a href="#">opção 2</a></li>
+                <li tabindex="9"><a href="#">opção 3</a></li>
+                <li tabindex="10"><a href="#">opção 4</a></li>
               </ul>
             </div>
           </li>
@@ -41,7 +41,7 @@
   </header>
 
   <main>
-    <section id="sobre" class="section">
+    <section tabindex="11" id="sobre" class="section">
       <div class="container">
         <h2>Sobre o Produto</h2>
         <p>Aqui vai uma descrição clara e concisa do seu produto.</p>
@@ -49,7 +49,7 @@
       </div>
     </section>
 
-    <section id="planos" class="section">
+    <section tabindex="12" id="planos" class="section">
       <div class="titulo">
         <h2>Planos e Preços</h2>
         <span class="separador"></span>
@@ -59,13 +59,12 @@
       </div>
 
 
-
       <div class="planos conteudo">
         <div id="tipos-btn">
           <button id="btn-plano">Plano: Premium</button>
         </div>
         <!-- CARDS Valores-->
-        <div id="plano-normal" class="card">
+        <div tabindex="13" id="plano-normal" class="card">
           <div class="conteudo">
             <div class="info">
               <h5>Plano: Padrão</h5>
@@ -74,7 +73,7 @@
           </div>
         </div>
 
-        <div id="plano-premium" class="card">
+        <div tabindex="14" id="plano-premium" class="card">
           <div class="conteudo">
             <div class="info">
               <h5>Plano: Premium</h5>
@@ -104,16 +103,16 @@
     </section>
   </main>
   <footer id="footer">
-    <div class="footer-divisoes">
+    <div tabindex="15" class="footer-divisoes">
       <h3>Redes Sociais 1</h3>
       <p>Conteúdo da primeira seção do footer.</p>
     </div>
 
-    <div class="footer-divisoes">
+    <div tabindex="16" class="footer-divisoes">
       <p>&copy; 2024 Nome da Equipe - Todos os direitos reservados</p>
     </div>
 
-    <div class="footer-divisoes">
+    <div tabindex="17" class="footer-divisoes">
       <h3>Outra Coisa - Titulo</h3>
       <p>Teste</p>
     </div>
