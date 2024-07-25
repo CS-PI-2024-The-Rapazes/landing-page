@@ -14,17 +14,20 @@
   <title>Site Nome</title>
 </head>
 
-<body>
+<body data-theme = "light-mode">
   <header class="top-bar">
     <div class="container">
       <h1 class="logo">MeuSite</h1>
       <button class="menu-toggle" id="menu-toggle">☰</button>
       <nav class="navigation" id="nav">
         <ul>
-          <li><a href="#home">Inicio</a></li>
-          <li><a href="#about">Sobre</a></li>
-          <li><a href="#equipe">Equipe</a></li>
-          <li><a href="#planos">Preços</a></li>
+          <li>
+            <a class="button-theme" onclick="modifierTheme()"><img class="image-button-moon" id = "icon-moon" src="src/assets/img/icons/icon-moon.svg"></a>
+          </li>
+          <li><a href="#home" class = "header-link">Inicio</a></li>
+          <li><a href="#about" class = "header-link">Sobre</a></li>
+          <li><a href="#equipe" class = "header-link">Equipe</a></li>
+          <li><a href="#planos" class = "header-link">Preços</a></li>
           <li>
             <a class="dropdown-botao" id="dropdownBotao">Ajuda ▼</a>
             <div class="dropdown-conteudo" id="dropdownConteudo">
@@ -58,9 +61,10 @@
           Veja nossos planos disponíveis e escolha o melhor para você.
         </p>
       </div>
-
-
-
+      <div>
+        <button class="button-accessibility" onclick="modifierFont()"><img class="image-button"
+            src="src/assets/img/icons/icon-Aa.svg"></button>
+      </div>
       <div class="planos conteudo">
         <div id="tipos-btn">
           <button id="btn-plano">Plano: Premium</button>

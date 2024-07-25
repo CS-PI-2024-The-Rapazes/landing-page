@@ -68,3 +68,36 @@ function modificaCard() {
 
 modificaCard();
 
+//BOTAO FONTE 
+function modifierFont() {
+  var body = document.querySelector("body");
+
+
+  if (body.style.fontSize == 'x-large') {
+    body.style.fontSize = 'large';
+    
+    return
+  }
+
+  body.style.fontSize = 'x-large';
+}
+
+//BOTAO DARK MODE/LIGHT
+
+function modifierTheme() {
+  const theme = document.body.getAttribute("data-theme");
+  const newTheme = theme === 'dark-mode' ? 'light-mode' : 'dark-mode';
+  document.body.setAttribute("data-theme", newTheme);
+  changeIconTheme(newTheme);
+}
+
+function changeIconTheme(theme) {
+  const image = document.getElementById('icon-moon');
+  if (theme === 'dark-mode') {
+    image.setAttribute("src", "src/assets/img/icons/icon-moon-light.svg");
+    image.setAttribute("id", "icon-moon-light");
+  } else {
+    image.setAttribute("src", "src/assets/img/icons/icon-moon.svg");
+    image.setAttribute("id", "icon-moon");
+  }
+}
