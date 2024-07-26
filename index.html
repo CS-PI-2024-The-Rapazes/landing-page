@@ -9,35 +9,28 @@
   <link rel="stylesheet" href="style/main.css" />
   <link rel="stylesheet" href="style/cards.css" />
   <link rel="stylesheet" href="style/scale.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <title>Site Nome</title>
 </head>
 
 <body>
-  <header class="top-bar">
-    <div class="container">
-      <h1 class="logo">MeuSite</h1>
-      <button class="menu-toggle" id="menu-toggle">☰</button>
-      <nav class="navigation" id="nav">
-        <ul>
-          <li><a href="#home">Inicio</a></li>
-          <li><a href="#about">Sobre</a></li>
-          <li><a href="#equipe">Equipe</a></li>
-          <li><a href="#planos">Preços</a></li>
-          <li>
-            <a class="dropdown-botao" id="dropdownBotao">Ajuda ▼</a>
-            <div class="dropdown-conteudo" id="dropdownConteudo">
-              <ul>
-                <li><a href="#">opção 1</a></li>
-                <li><a href="#">opção 2</a></li>
-                <li><a href="#">opção 3</a></li>
-                <li><a href="#">opção 4</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </nav>
-    </div>
+  <header>
+    <nav class="nav" aria-label="menu navegação">
+      <img src="src/assets/img/" alt="Logo" id="logo">
+      <ul>
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#equipe">Equipe</a></li>
+        <li><a href="#">Ajuda</a>
+          <ul>
+            <li><a href="">Themes</a></li>
+            <li><a href="">Plugins</a></li>
+            <li><a href="">Tutorials</a></li>
+          </ul>
+        </li>
+        <li><a href="#planos">Preços</a></li>
+    </nav>
   </header>
 
   <main>
@@ -58,32 +51,68 @@
         </p>
       </div>
 
-
+      <button id="btn-plano">Plano: Premium</button>
 
       <div class="planos conteudo">
-        <div id="tipos-btn">
-          <button id="btn-plano">Plano: Premium</button>
-        </div>
         <!-- CARDS Valores-->
         <div id="plano-normal" class="card">
           <div class="conteudo">
-            <div class="info">
-              <h5>Plano: Padrão</h5>
-              <p>Plano para os Sem grana.</p>
+            <div class="cabecalho">
+              <h5>Gratuito</h5>
+              <div class="descricao">
+                <p><strong>Totalmente gratuito</strong></p>
+              </div>
+              <div>
+                <div><span class="preco"><strong>R$ 0,00</strong></div>
+              </div>
+              <button class="btn-card-plano" type="button">Começe agora</button>
+            </div>
+            <div>
+              <div class="lista">
+                <p><b>O plano gratuito inclui:</b></p>
+                <ul>
+                  <li>Cardapio padrão segmento</li>
+                  <li>Pedidos Limitados</li>
+                  <li>Painel de Vendas</li>
+                  <li>Tela de Preparo</li>
+                  <li>Módulo Balcão <span class="claro">(Venda)</span></li>
+                  <li>Suporte pelo WhatsApp</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
 
         <div id="plano-premium" class="card">
           <div class="conteudo">
-            <div class="info">
-              <h5>Plano: Premium</h5>
-              <p>Plano pago para os ricos boladão</p>
+            <div class="cabecalho">
+              <h5>Premium</h5>
+              <div class="descricao">
+                <p><strong>Com funções adicionais</strong></p>
+              </div>
+              <div>
+                <div><span class="preco"><strong>R$ 35,50</strong></span><span> / mensal</span></div>
+              </div>
+              <button class="btn-card-plano" type="button">Assine agora</button>
+            </div>
+            <div>
+              <div class="lista">
+                <p><b>Todas as vantagens do plano Gratuito e mais: </b></p>
+                <ul>
+                  <li>Cardapio personalizado</li>
+                  <li>Pedidos <strong>Ilimitados</strong></li>
+                  <li>Cadastro de Clientes</li>
+                  <li>Operação de Caixa</li>
+                  <li>Modulos Comandos <span class="claro">(Agendamento)</span></li>
+                  <li>Diferentes formas de pagamentos</li>
+                  <li>Histórico de pedidos</li>
+                  <li>Controle de estoque dos produtos</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
     </section>
 
     <section id="equipe" class="section">
@@ -103,17 +132,17 @@
       </div>
     </section>
   </main>
-  <footer id="footer">
-    <div class="footer-divisoes">
+  <footer>
+    <div class="colunas">
       <h3>Redes Sociais 1</h3>
       <p>Conteúdo da primeira seção do footer.</p>
     </div>
 
-    <div class="footer-divisoes">
+    <div class="colunas">
       <p>&copy; 2024 Nome da Equipe - Todos os direitos reservados</p>
     </div>
 
-    <div class="footer-divisoes">
+    <div class="colunas">
       <h3>Outra Coisa - Titulo</h3>
       <p>Teste</p>
     </div>

@@ -1,9 +1,28 @@
 :root {
   --background-light: #fdf7f9;
   --background-dark: #232323;
-  --main-color: #F2598C;
-  --text-color-light: #232323;
-  --text-color-dark: #fdf7f9;
+  --main-color: #db2872;
+  --text-dark: #232323;
+  --text-light: #fdf7f9;
+  --background-rosa: #ffe4ee;
+  --main-font: "Arial", sans-serif;
+}
 
-  --tw-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1) !important;
+
+/* Chrome, Safari e Opera -- Nagadores bons 
+    Modificadores para a scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--main-color);
 }

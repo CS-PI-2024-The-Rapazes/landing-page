@@ -8,34 +8,15 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// BOTÃO TOGGLE
-document.addEventListener("DOMContentLoaded", function () {
-  const dropdownButton = document.getElementById("dropdownBotao");
-  const dropdownContent = document.getElementById("dropdownConteudo");
-
-  dropdownButton.addEventListener("click", function () {
-    dropdownContent.classList.toggle("show");
-  });
-
-  window.addEventListener("click", function (event) {
-    if (!event.target.matches(".dropdown-botao")) {
-      if (dropdownContent.classList.contains("show")) {
-        dropdownContent.classList.remove("show");
-      }
-    }
-  });
-});
-
-// BOX SHADOW NO MENU
 window.addEventListener("scroll", function () {
-  var topBar = document.querySelector(".top-bar");
+  var nav = document.querySelector(".nav");
   if (window.scrollY > 50) {
-    topBar.classList.add("shadow");
+    nav.classList.add("sombra");
   } else {
-    topBar.classList.remove("shadow");
+    nav.classList.remove("sombra");
   }
-});
 
+});
 
 function modificaCard() {
   document.getElementById('btn-plano').addEventListener('click', function () {
@@ -44,22 +25,20 @@ function modificaCard() {
     var btnText = document.getElementById('btn-plano');
 
     if (cardNormal.style.display === 'none') {
-      cardNormal.style.display = 'block';
+      cardNormal.style.display = 'flex';
       cardPremium.style.display = 'none';
       btnText.textContent = 'Plano: Premium';
     } else {
       cardNormal.style.display = 'none';
-      cardPremium.style.display = 'block';
+      cardPremium.style.display = 'flex';
       btnText.textContent = 'Plano: Padrão';
     }
     window.addEventListener('resize', function () {
-      // Pega o tamanho da tela
       var largura = window.innerWidth;
-      var altura = window.innerHeight;
 
       if (largura >= 770) {
-        cardNormal.style.display = 'block';
-        cardPremium.style.display = 'block';
+        cardNormal.style.display = 'flex';
+        cardPremium.style.display = 'flex';
       }
 
     });
