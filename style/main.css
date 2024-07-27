@@ -17,7 +17,6 @@ body {
 
 main {
   display: flex;
-  padding: 10px;
   margin-top: 100px;
   flex-direction: column;
 }
@@ -126,9 +125,33 @@ main {
   background: var(--background-light);
 }
 
+#sobre {
+  margin-top: 0;
+  background-color: var(--background-light);
+}
+
+.wave-separador {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-separador svg {
+  position: relative;
+  display: block;
+  width: calc(194% + 1.3px);
+  height: 252px;
+}
+
+.wave-separador .shape-fill {
+  fill: #DB2872;
+}
+
 footer {
   background-color: var(--main-color);
-  padding: 20px;
+  padding: 100px 0px 60px 0px;
   display: flex;
   justify-content: space-around;
 }
@@ -146,4 +169,9 @@ footer .colunas h3 {
 footer .colunas p {
   font-size: 14px;
   line-height: 1.6;
+}
+
+.footer-separador {
+  overflow: hidden;
+  line-height: 0;
 }
