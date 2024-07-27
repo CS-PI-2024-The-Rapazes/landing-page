@@ -5,9 +5,10 @@
   --text-dark: #232323;
   --text-light: #fdf7f9;
   --background-rosa: #ffe4ee;
+
+  --text-info-card: #3c3c3c;
   --main-font: "Arial", sans-serif;
 }
-
 
 /* Chrome, Safari e Opera -- Nagadores bons 
     Modificadores para a scrollbar */
