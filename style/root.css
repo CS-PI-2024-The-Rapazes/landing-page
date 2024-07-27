@@ -1,9 +1,22 @@
 :root {
-  --background-light: #fdf7f9;
-  --background-dark: #232323;
   --main-color: #F2598C;
-  --text-color-light: #232323;
-  --text-color-dark: #fdf7f9;
-
   --tw-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1) !important;
+}
+
+[data-theme='light-mode'] {
+  --background-color: #fdf7f9;
+  --text-color: #232323;
+  --link-color: #232323; 
+  --dropdown-background: #ffffff; 
+  --accessibility-background-color: transparent;
+  --background-card-color: #fdf7f9;
+}
+
+[data-theme='dark-mode'] {
+  --background-color: #232323;
+  --text-color: #fdf7f9;
+  --link-color: #fdf7f9; 
+  --dropdown-background: #333333; 
+  --accessibility-background-color: #fdf7f9;
+  --background-card-color: #3a3a3a;
 }
