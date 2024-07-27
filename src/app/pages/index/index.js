@@ -92,7 +92,7 @@ function modifierTheme() {
 }
 
 function changeIconTheme(theme) {
-  const image = document.getElementById('icon-moon');
+  const image = document.getElementById('icon-moon') || document.getElementById('icon-moon-light');
   if (theme === 'dark-mode') {
     image.setAttribute("src", "src/assets/img/icons/icon-moon-light.svg");
     image.setAttribute("id", "icon-moon-light");
