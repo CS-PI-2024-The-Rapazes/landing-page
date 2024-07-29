@@ -43,12 +43,39 @@
   <main>
     <section id="sobre" class="section">
       <div class="container">
-        <h2>Sobre o Produto</h2>
-        <p>Aqui vai uma descrição clara e concisa do seu produto.</p>
-        <p>Inclua screenshots ou vídeos demonstrativos para ilustrar.</p>
+        <div class="sobre-content">
+          <div class="text-content">
+            <h2>Sistema de gestão do seu negócio.</h2>
+            <p>Feito para automatizar a realização e agendamento de pedidos, com Módulos de Venda, Operação, Relatórios de Caixa e Cardápio personalizável.</p>
+            <div class="funcionalidades">
+              <h3>Funcionalidades Principais</h3>
+              <ul>
+                <li><strong>Gestão Completa:</strong> Automatize pedidos e agendamentos para otimizar o fluxo de trabalho.</li>
+                <li><strong>Relatórios em Tempo Real:</strong> Acompanhe vendas, produtos e clientes com relatórios detalhados.</li>
+                <li><strong>Interface Intuitiva:</strong> Personalize o sistema conforme as necessidades específicas do seu negócio.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="image-content">
+            <div class="image-large-wrapper">
+              <img src="src/assets/img/Screenshot_12.png" alt="Interface do Sistema" class="image-large" onclick="openModal(this)" />
+            </div>
+            <div class="image-small-wrapper">
+              <img src="src/assets/img/Screenshot_13.png" alt="Funcionalidades" class="image-small" onclick="openModal(this)" />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-
+    
+    <!-- Modal -->
+    <div id="imageModal" class="modal" style="display: none;">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="modalImage">
+    </div>
+    
+    <div class="separator-down"></div>
+    
     <section id="planos" class="section">
       <div class="titulo">
         <h2>Planos e Preços</h2>
@@ -82,6 +109,8 @@
         </div>
       </div>
     </section>
+
+    <div class="separator-triangle"></div>
 
     <section id="contato" class="section">
       <div class="container">
