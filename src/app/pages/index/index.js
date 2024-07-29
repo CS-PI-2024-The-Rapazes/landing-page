@@ -68,3 +68,25 @@ function modificaCard() {
 
 modificaCard();
 
+// Função para abrir o modal
+function openModal(element) {
+  var modal = document.getElementById("imageModal");
+  var modalImg = document.getElementById("modalImage");
+  modal.style.display = "flex"; // Garante que o modal use flexbox para centralização
+  modalImg.src = element.src;
+}
+
+// Função para fechar o modal
+function closeModal() {
+  var modal = document.getElementById("imageModal");
+  modal.style.display = "none";
+}
+
+// Adiciona evento para fechar o modal ao clicar fora da imagem
+window.onclick = function(event) {
+  var modal = document.getElementById("imageModal");
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+

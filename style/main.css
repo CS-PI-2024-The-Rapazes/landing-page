@@ -1,3 +1,4 @@
+/* Estilo Geral */
 @import url(root.css);
 
 * {
@@ -28,11 +29,12 @@ main {
   padding: 0px 0px 0px 25px;
 }
 
+/* Estilo do Topbar */
 .top-bar {
   top: 0;
   width: 100%;
   position: sticky;
-  padding: 20px 10px 20px 10px;
+  padding: 20px 10px;
   background-color: var(--main-color);
   z-index: 1000;
 }
@@ -64,12 +66,11 @@ main {
 
 .top-bar nav ul li a:hover {
   padding-bottom: 25px;
-  border-bottom: 2px solid #fff
+  border-bottom: 2px solid #fff;
 }
 
 .top-bar.shadow {
-  box-shadow: 0 5px 6px -1px rgba(0, 0, 0, 0.2),
-    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
 }
 
 .menu-toggle {
@@ -112,9 +113,9 @@ main {
   z-index: 1;
   top: 100%;
   right: 0;
-  border-radius: 0px 0px 10px 10px;
+  border-radius: 0 0 10px 10px;
   background-color: var(--main-color);
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .dropdown-conteudo ul {
@@ -126,11 +127,184 @@ main {
 .dropdown-conteudo li a {
   display: block;
   padding: 10px !important;
-  border-bottom: 0px !important;
+  border-bottom: 0 !important;
 }
 
 .dropdown-conteudo.show {
   display: block;
+}
+
+/* Estilo da Seção Sobre */
+.section {
+  padding: 40px 0;
+}
+
+.intro-text {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.intro-text h2 {
+  font-size: 2rem;
+  color: var(--text-color-dark);
+  margin-bottom: 10px;
+}
+
+.intro-text p {
+  color: var(--text-color-dark);
+  font-size: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.sobre-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.text-content {
+  flex: 1;
+  max-width: 50%;
+  margin-right: 20px;
+}
+
+.text-content h2 {
+  font-size: 2rem;
+  color: var(--text-color-light);
+  margin-bottom: 0.5em;
+}
+
+.text-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var( --text-color-light);
+  margin-bottom: 1.5em;
+}
+
+.funcionalidades {
+  margin-top: 10em;
+  margin-left: 2em;
+}
+
+.funcionalidades h3 {
+  font-size: 1.25rem;
+  color: var(--text-color-light);
+  margin-bottom: 1em;
+}
+
+.funcionalidades ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.funcionalidades li {
+  font-size: 1rem;
+  color: var(--text-color-light);
+  margin-bottom: 0.5em;
+}
+
+/* Estilo das Imagens */
+.image-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.image-large-wrapper,
+.image-small-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.image-large-wrapper {
+  margin-left: 20px;
+}
+
+.image-small-wrapper {
+  position: relative;
+}
+
+.image-large {
+  width: 100%;
+  max-width: 600px;
+  border: 5px solid var(--main-color);
+  border-radius: 20px;
+}
+
+.image-small {
+  width: 100%;
+  max-width: 400px;
+  border: 5px solid var(--main-color);
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.image-small-wrapper:hover .small-image-description {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Separadores */
+.separator-triangle {
+  width: 100%;
+  height: 50px;
+  background: var(--main-color);
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
+
+.separator-down {
+  width: 100%;
+  height: 50px;
+  background: var(--main-color);
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo do Modal */
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  max-width: 80%;
+  max-height: 80%;
+  margin: auto;
+  display: block;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #f1f1f1;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 #footer {
@@ -159,3 +333,24 @@ main {
   background-color: var(--main-color);
   padding: 15px;
 }
+
+@media (max-width: 768px) {
+  .sobre-content {
+    flex-direction: column;
+  }
+
+  .text-content, .image-content {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .funcionalidades {
+    margin-top: 2em;
+    margin-left: 0;
+  }
+
+  .image-large-wrapper {
+    margin-left: 0;
+  }
+}
+
