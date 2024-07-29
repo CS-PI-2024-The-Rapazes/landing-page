@@ -9,8 +9,7 @@
         align-items: center;
     }
 
-    .card,
-    .planos.conteudo {
+    .card {
         margin: auto;
     }
 
@@ -18,28 +17,17 @@
         display: flex;
     }
 
-    .planos.conteudo {
-        justify-content: flex-start;
-        gap: 16px;
-        padding: 0 64px 0 20px;
-        margin-bottom: 24px;
-    }
-
     #plano-premium {
         display: none;
     }
 
     #btn-plano {
-        margin-top: 25px;
-        margin-left: auto;
-        margin-right: 45%;
-        margin-bottom: 25px;
+        margin: 25px auto 0 auto;
         width: 150px;
         display: flex;
+        font-size: large;
         justify-content: center;
-        /* Adicionado para centralizar o texto horizontalmente */
         align-items: center;
-        /* Adicionado para centralizar o texto verticalmente */
         cursor: pointer;
         border: 0;
         border-bottom: 2.5px solid var(--main-color);
@@ -47,5 +35,9 @@
         padding: 10px;
         opacity: 1;
         transition: opacity 0.5s ease-in-out;
+    }
+
+    footer .colunas .sociais-links {
+        font-size: 27px;
     }
 }
