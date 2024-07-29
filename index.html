@@ -24,10 +24,10 @@
           <li>
             <a class="button-theme" onclick="modifierTheme()"><img class="image-button-moon" id = "icon-moon" src="src/assets/img/icons/icon-moon.svg"></a>
           </li>
-          <li><a href="#home" class = "header-link">Inicio</a></li>
-          <li><a href="#about" class = "header-link">Sobre</a></li>
-          <li><a href="#equipe" class = "header-link">Equipe</a></li>
-          <li><a href="#planos" class = "header-link">Preços</a></li>
+          <li><a href="#home">Inicio</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="src/app/pages/team-description/team-description.html">Equipe</a></li>
+          <li><a href="#planos">Preços</a></li>
           <li>
             <a class="dropdown-botao" id="dropdownBotao">Ajuda ▼</a>
             <div class="dropdown-conteudo" id="dropdownConteudo">
@@ -47,12 +47,39 @@
   <main>
     <section id="sobre" class="section">
       <div class="container">
-        <h2>Sobre o Produto</h2>
-        <p>Aqui vai uma descrição clara e concisa do seu produto.</p>
-        <p>Inclua screenshots ou vídeos demonstrativos para ilustrar.</p>
+        <div class="sobre-content">
+          <div class="text-content">
+            <h2>Sistema de gestão do seu negócio.</h2>
+            <p>Feito para automatizar a realização e agendamento de pedidos, com Módulos de Venda, Operação, Relatórios de Caixa e Cardápio personalizável.</p>
+            <div class="funcionalidades">
+              <h3>Funcionalidades Principais</h3>
+              <ul>
+                <li><strong>Gestão Completa:</strong> Automatize pedidos e agendamentos para otimizar o fluxo de trabalho.</li>
+                <li><strong>Relatórios em Tempo Real:</strong> Acompanhe vendas, produtos e clientes com relatórios detalhados.</li>
+                <li><strong>Interface Intuitiva:</strong> Personalize o sistema conforme as necessidades específicas do seu negócio.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="image-content">
+            <div class="image-large-wrapper">
+              <img src="src/assets/img/Screenshot_12.png" alt="Interface do Sistema" class="image-large" onclick="openModal(this)" />
+            </div>
+            <div class="image-small-wrapper">
+              <img src="src/assets/img/Screenshot_13.png" alt="Funcionalidades" class="image-small" onclick="openModal(this)" />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-
+    
+    <!-- Modal -->
+    <div id="imageModal" class="modal" style="display: none;">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="modalImage">
+    </div>
+    
+    <div class="separator-down"></div>
+    
     <section id="planos" class="section">
       <div class="titulo">
         <h2>Planos e Preços</h2>
@@ -88,15 +115,9 @@
           </div>
         </div>
       </div>
-
     </section>
 
-    <section id="equipe" class="section">
-      <div class="container">
-        <h2>Sobre a Equipe</h2>
-        <p>Conheça os desenvolvedores por trás do nosso produto.</p>
-      </div>
-    </section>
+    <div class="separator-triangle"></div>
 
     <section id="contato" class="section">
       <div class="container">
@@ -115,18 +136,16 @@
     </div>
 
     <div class="footer-divisoes">
-      <p>&copy; 2024 Nome da Equipe - Todos os direitos reservados</p>
+      <p>&copy; 2024 Os Rapazes - Todos os direitos reservados</p>
     </div>
 
     <div class="footer-divisoes">
       <h3>Outra Coisa - Titulo</h3>
-      <p>Teste</p>
+      <p>PlaceHolder</p>
     </div>
   </footer>
 
   <script src="src/app/pages/team-description/team-description.js"></script>
   <script src="src/app/pages/index/index.js"></script>
 </body>
-
-
 </html>
