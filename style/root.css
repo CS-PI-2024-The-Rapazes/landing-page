@@ -10,6 +10,14 @@
   --main-font: "Arial", sans-serif;
 }
 
+
+
+/* COR TESTE */
+/* :root {
+    --main-color: #db2872;
+    --main-color: #7E1541;
+} */
+
 /* Chrome, Safari e Opera -- Nagadores bons 
     Modificadores para a scrollbar */
 ::-webkit-scrollbar {

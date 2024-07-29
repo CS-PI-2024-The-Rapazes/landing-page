@@ -8,16 +8,23 @@
   font-family: var(--main-font);
 }
 
+header,
+#sobre {
+  background-color: var(--background-light);
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: var(--background-rosa);
   /* Navegador bosta - Edge e Explore*/
   scrollbar-width: thin;
   scrollbar-color: var(--main-color) var(--background-light);
+
 }
 
 main {
   display: flex;
-  margin-top: 100px;
   flex-direction: column;
 }
 
@@ -37,20 +44,6 @@ main {
   z-index: 1000;
 }
 
-.nav.sombra {
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1) !important;
-  background-color: var(--main-color);
-  transition: background-color 0.4s ease-in;
-}
-
-.nav.sombra ul li a {
-  color: var(--text-light);
-}
-
-.nav.sombra ul li a::before {
-  background: var(--background-light);
-}
-
 .nav ul {
   list-style-type: none;
   padding: 0;
@@ -60,7 +53,7 @@ main {
 
 .nav ul li {
   display: inline-block;
-  padding: 10px;
+  padding: 0.5rem;
   position: relative;
 }
 
@@ -95,6 +88,20 @@ main {
   transform-origin: 50% 50%;
 }
 
+.nav.sombra {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1) !important;
+  background-color: var(--main-color);
+  transition: background-color 0.4s ease-in;
+}
+
+.nav.sombra ul li a {
+  color: var(--text-light);
+}
+
+.nav.sombra ul li a::before {
+  background: var(--background-light);
+}
+
 .nav ul ul {
   position: absolute;
   top: 100%;
@@ -125,12 +132,20 @@ main {
   background: var(--background-light);
 }
 
+
 #sobre {
-  margin-top: 0;
+  position: relative;
   background-color: var(--background-light);
+  height: 450px;
+  overflow: auto;
+}
+
+#sobre .container {
+  margin-top: 10rem;
 }
 
 .wave-separador {
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -141,19 +156,21 @@ main {
 .wave-separador svg {
   position: relative;
   display: block;
-  width: calc(194% + 1.3px);
-  height: 252px;
+  width: calc(150% + 1.4px);
+  height: 175px;
 }
 
 .wave-separador .shape-fill {
-  fill: #DB2872;
+  fill: var(--main-color);
 }
 
 footer {
   background-color: var(--main-color);
-  padding: 100px 0px 60px 0px;
   display: flex;
   justify-content: space-around;
+  position: relative;
+  height: 5rem;
+  padding: 2rem;
 }
 
 footer .colunas {
@@ -163,7 +180,6 @@ footer .colunas {
 
 footer .colunas h3 {
   font-size: 18px;
-  margin-bottom: 10px;
 }
 
 footer .colunas p {
@@ -172,6 +188,8 @@ footer .colunas p {
 }
 
 .footer-separador {
-  overflow: hidden;
+  margin-bottom: 0;
   line-height: 0;
+  position: relative;
+  fill: var(--main-color);
 }
