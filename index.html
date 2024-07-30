@@ -18,6 +18,8 @@
   <header>
     <nav class="nav" aria-label="menu navegação">
       <img src="src/assets/img/" alt="Logo" id="logo" />
+      <input type="checkbox" id="checkbox" class="checkbox" />
+      <label for="checkbox" class="label-menu"><span class="icone"></span></label>
       <ul>
         <li><a href="#home">Inicio</a></li>
         <li><a href="#about">Sobre</a></li>
@@ -208,8 +210,20 @@
 
     <div class="footer-separador">
     </div>
-  </main>
 
+    <div id="circularMenu" class="circular-menu">
+      <a class="btn" onclick="document.getElementById('circularMenu').classList.toggle('ativo');">
+        <i class="fa fa-plus"></i>
+      </a>
+      <span class="items-menu-dentro">
+        <a href="#" class="menu-item">teste</a>
+        <a href="#" class="menu-item">teste</a>
+        <a href="#" class="menu-item">teste</a>
+        <a href="#" class="menu-item">teste</a>
+      </span>
+    </div>
+
+  </main>
   <footer>
     <div class="container">
       <div class="colunas">
