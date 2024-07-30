@@ -4,17 +4,87 @@
         transition: margin-left 0.3s ease;
     }
 
-    nav ul {
-        flex-direction: column;
+    .nav {
+        padding: 1rem;
+        background-color: var(--main-color);
+    }
+
+    .nav ul li {
+        padding: 0 !important;
+        width: 100%;
+        margin-top: 2.2rem;
+    }
+
+    .nav ul li a {
+        padding: 1rem;
+        margin: auto;
+        color: var(--text-light);
+    }
+
+    .nav ul li a::before {
+        background: var(--text-light);
+        transform-origin: 50% 50%;
+    }
+
+    .nav .menu-mobile {
+        margin-top: 2.2rem;
+        display: block;
+        position: absolute;
+        left: 0;
+        background-color: var(--main-color);
+        text-align: center;
+        width: 100%;
+        visibility: hidden;
+        overflow-y: hidden;
+        transition: 0.5s;
+    }
+
+    .nav #nav-check:checked~.menu-mobile {
+        height: calc(100vh - 50px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    .label-menu {
+        display: flex;
         align-items: center;
+        gap: 0.5rem;
+        padding: 1rem 0;
+        cursor: pointer;
+    }
+
+    .icone {
+        border-top: 0.130rem solid var(--text-light);
+        width: 1.3rem;
+    }
+
+    .icone::after,
+    .icone::before {
+        content: " ";
+        display: block;
+        width: 1.25rem;
+        height: 0.15rem;
+        background: white;
+        margin-top: 0.3125rem;
+        position: relative;
+        transition: 0.3s;
+    }
+
+    .nav #nav-check:checked~.label-menu .icone {
+        border-top-color: transparent;
+    }
+
+    .nav #nav-check:checked~.label-menu .icone::before {
+        transform: rotate(135deg);
+    }
+
+    .nav #nav-check:checked~.label-menu .icone::after {
+        transform: rotate(-135deg);
+        top: -0.4375rem;
     }
 
     .card {
         margin: auto;
-    }
-
-    .navigation.active {
-        display: flex;
     }
 
     #plano-premium {
@@ -40,4 +110,20 @@
     footer .colunas .sociais-links {
         font-size: 27px;
     }
+
+    .nav ul ul {
+        position: absolute;
+        z-index: 3;
+        text-align: center;
+        width: 100%;
+        position: static;
+        background-color: var(--background-light);
+    }
+
+    .nav ul ul li {
+        display: block;
+        float: none;
+        width: auto;
+    }
+
 }
