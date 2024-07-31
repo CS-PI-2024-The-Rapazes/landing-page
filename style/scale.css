@@ -6,13 +6,13 @@
 
     .nav {
         padding: 1rem;
-        background-color: var(--main-color);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1) !important;
     }
 
     .nav ul li {
         padding: 0 !important;
         width: 100%;
-        margin-top: 2.2rem;
+        margin-top: 1.2rem;
     }
 
     .nav ul li a {
@@ -27,25 +27,20 @@
     }
 
     .nav .menu-mobile {
-        margin-top: 2.2rem;
+        margin-top: 4.2rem;
         display: block;
         position: absolute;
         left: 0;
-        background-color: var(--main-color);
         text-align: center;
         width: 100%;
+        height: 0;
+        z-index: 1;
         visibility: hidden;
         overflow-y: hidden;
-        transition: 0.5s;
+        transition: 0.6s;
     }
 
-    .nav #nav-check:checked~.menu-mobile {
-        height: calc(100vh - 50px);
-        visibility: visible;
-        overflow-y: auto;
-    }
-
-    .label-menu {
+    .nav>.label-menu {
         display: flex;
         align-items: center;
         gap: 0.5rem;
@@ -53,21 +48,29 @@
         cursor: pointer;
     }
 
-    .icone {
-        border-top: 0.130rem solid var(--text-light);
-        width: 1.3rem;
+    .nav .icone {
+        height: 1.24rem;
+        border-top: 0.130rem solid var(--main-color);
+        width: 1.25rem;
     }
 
-    .icone::after,
-    .icone::before {
+    .nav .icone::after,
+    .nav .icone::before {
         content: " ";
         display: block;
         width: 1.25rem;
         height: 0.15rem;
-        background: white;
+        background: var(--main-color);
         margin-top: 0.3125rem;
         position: relative;
         transition: 0.3s;
+    }
+
+    .nav #nav-check:checked~.menu-mobile {
+        height: calc(100vh - 4.658rem);
+        visibility: visible;
+        overflow-y: auto;
+        background-color: var(--main-color);
     }
 
     .nav #nav-check:checked~.label-menu .icone {
@@ -117,7 +120,7 @@
         text-align: center;
         width: 100%;
         position: static;
-        background-color: var(--background-light);
+        background-color: var(--main-color);
     }
 
     .nav ul ul li {
@@ -126,4 +129,15 @@
         width: auto;
     }
 
+    .nav.sombra ul ul,
+    .nav.sombra ul ul li a {
+        color: var(--text-light);
+        background-color: var(--main-color);
+    }
+
+    .nav.sombra .icone,
+    .nav.sombra .icone::after,
+    .nav.sombra .icone::before {
+        border-top: 0.130rem solid var(--background-light);
+    }
 }

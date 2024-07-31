@@ -1,12 +1,20 @@
-// MENU MOBILE DROPDOWN
-document.addEventListener("DOMContentLoaded", function () {
-  const menuToggle = document.getElementById("menu-toggle");
-  const nav = document.getElementById("nav");
+window.onload = function () {
+  var navCheck = document.getElementById('nav-check');
+  var nav = document.querySelector('.nav');
+  var icone = document.querySelector('.icone');
+  var labelMenu = document.querySelector('.label-menu');
 
-  menuToggle.addEventListener("click", function () {
-    nav.classList.toggle("active");
+  navCheck.addEventListener('change', function () {
+    if (this.checked) {
+      nav.style.backgroundColor = 'var(--main-color)';
+      icone.style.background = 'var(--background-light)';
+    } else {
+      nav.style.backgroundColor = '';
+      icone.style.backgroundColor = '';
+      labelMenu.style.backgroundColor = '';
+    }
   });
-});
+};
 
 window.addEventListener("scroll", function () {
   var nav = document.querySelector(".nav");
