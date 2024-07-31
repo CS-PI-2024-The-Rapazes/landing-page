@@ -1,3 +1,4 @@
+@import url('main.css');
 @media (max-width: 770px) {
     main {
         margin-left: 0;
@@ -93,6 +94,11 @@
 
     #plano-premium {
         display: none;
+  }
+    #tipos-btn {
+        position: absolute;
+        z-index: -1;
+   
     }
 
     #btn-plano {
