@@ -1,150 +1,102 @@
 @import url('main.css');
+
 @media (max-width: 770px) {
     main {
         margin-left: 0;
         transition: margin-left 0.3s ease;
     }
 
-    .nav {
-        padding: 1rem;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1) !important;
-    }
-
-    .nav ul li {
-        padding: 0 !important;
-        width: 100%;
-        margin-top: 1.2rem;
-    }
-
-    .nav ul li a {
-        padding: 1rem;
-        margin: auto;
-        color: var(--text-light);
-    }
-
-    .nav ul li a::before {
-        background: var(--text-light);
-        transform-origin: 50% 50%;
-    }
-
-    .nav .menu-mobile {
-        margin-top: 4.2rem;
-        display: block;
-        position: absolute;
+    .top-bar {
         left: 0;
+    }
+
+    .top-bar .logo {
         text-align: center;
         width: 100%;
-        height: 0;
-        z-index: 1;
-        visibility: hidden;
-        overflow-y: hidden;
-        transition: 0.6s;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .nav>.label-menu {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        padding: 1rem 0;
-        cursor: pointer;
+    .top-bar nav {
+        display: none;
     }
 
-    .nav .icone {
-        height: 1.24rem;
-        border-top: solid var(--main-color);
-        width: 1.25rem;
+    .top-bar nav ul li a:hover {
+        padding-bottom: 10px;
+        border-bottom: 2px solid #fff;
     }
 
-    .nav .icone::after,
-    .nav .icone::before {
-        content: " ";
-        display: block;
-        width: 1.25rem;
-        margin-top: 0.3125rem;
-        position: relative;
-        transition: 0.3s;
-        border-top: solid var(--main-color);
-    }
-
-    .nav #nav-check:checked~.menu-mobile {
-        height: calc(100vh - 4.658rem);
-        visibility: visible;
-        overflow-y: auto;
+    .navigation {
+        display: none;
+        flex-direction: column;
+        position: absolute;
         background-color: var(--main-color);
+        width: 100%;
+        top: 100%;
+        left: 0;
+        padding: 1rem;
+        border-radius: 0px 0px 10px 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        transition: all 0.4s ease;
     }
 
-    .nav #nav-check:checked~.label-menu .icone {
-        border-top-color: transparent;
+    .navigation ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
     }
 
-    .nav #nav-check:checked~.label-menu .icone::before {
-        transform: rotate(135deg);
-        border-top: solid var(--background-light);
+    .navigation.active {
+        display: flex;
     }
 
-    .nav #nav-check:checked~.label-menu .icone::after {
-        top: -0.4375rem;
-        transform: rotate(-135deg);
-        border-top: solid var(--background-light);
+    /* botão toggle - 'ajuda' */
+    .menu-toggle {
+        display: block;
     }
 
-    .card {
-        margin: auto;
+    .dropdown-conteudo {
+        width: 150px;
+        left: 0;
+        border-radius: 0px 0px 10px 10px;
+    }
+
+    /* Card */
+    .planos.conteudo {
+        -webkit-box-pack: start;
+        justify-content: flex-start;
+        gap: 16px;
+        padding-right: 64px;
+        padding-left: 20px;
+        margin-bottom: 24px;
     }
 
     #plano-premium {
         display: none;
-  }
+    }
+
     #tipos-btn {
         position: absolute;
         z-index: -1;
-   
+        
     }
 
     #btn-plano {
-        margin: 25px auto 0 auto;
-        width: 150px;
         display: flex;
-        font-size: large;
-        justify-content: center;
-        align-items: center;
         cursor: pointer;
-        border: 0;
-        border-bottom: 2.5px solid var(--main-color);
+        border: 1px solid var(--main-color);
+        border-radius: 10px;
         background: transparent;
         padding: 10px;
+        font: bold;
+        font-size: 14px;
         opacity: 1;
         transition: opacity 0.5s ease-in-out;
     }
 
-    footer .colunas .sociais-links {
-        font-size: 27px;
-    }
-
-    .nav ul ul {
-        position: absolute;
-        z-index: 3;
-        text-align: center;
-        width: 100%;
-        position: static;
+    #btn-plano:hover {
         background-color: var(--main-color);
-    }
-
-    .nav ul ul li {
-        display: block;
-        float: none;
-        width: auto;
-    }
-
-    .nav.sombra ul ul,
-    .nav.sombra ul ul li a {
-        color: var(--text-light);
-        background-color: var(--main-color);
-    }
-
-    .nav.sombra .icone,
-    .nav.sombra .icone::after,
-    .nav.sombra .icone::before {
-        border-top: solid var(--background-light);
+        color: var(--text-color-dark);
     }
 }

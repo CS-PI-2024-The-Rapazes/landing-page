@@ -10,32 +10,38 @@
   <link rel="stylesheet" href="style/main.css" />
   <link rel="stylesheet" href="style/cards.css" />
   <link rel="stylesheet" href="style/scale.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <title>Site Nome</title>
 </head>
 
 <body data-theme = "light-mode">
   <header class="top-bar">
-    <nav class="nav" aria-label="menu navegação">
-      <img src="#" alt="Logo" id="logo" />
-      <input type="checkbox" id="nav-check" class="checkbox" />
-      <label for="nav-check" class="label-menu"><span class="icone"></span></label>
-      <ul class="menu-mobile">
-        <li><a href="#home">Início</a></li>
-        <li><a href="#about">Sobre</a></li>
-        <li><a href="src/app/pages/team-description/team-description.html">Equipe</a></li>
-        <li>
-          <a href="#">Ajuda <i class="fa-solid fa-chevron-down"></i></a>
-          <ul>
-            <li><a href="#">Themes</a></li>
-            <li><a href="#">Plugins</a></li>
-            <li><a href="#">Tutorials</a></li>
-          </ul>
-        </li>
-        <li><a href="#planos">Preços</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <h1 class="logo">MeuSite</h1>
+      <button class="menu-toggle" id="menu-toggle">☰</button>
+      <nav class="navigation" id="nav">
+        <ul>
+          <li>
+            <a class="button-theme" onclick="modifierTheme()"><img class="image-button-moon" id = "icon-moon" src="src/assets/img/icons/icon-moon.svg"></a>
+          </li>
+          <li><a href="#home">Inicio</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="src/app/pages/team-description/team-description.html">Equipe</a></li>
+          <li><a href="#planos">Preços</a></li>
+          <li>
+            <a class="dropdown-botao" id="dropdownBotao">Ajuda ▼</a>
+            <div class="dropdown-conteudo" id="dropdownConteudo">
+              <ul>
+                <li><a href="#">opção 1</a></li>
+                <li><a href="#">opção 2</a></li>
+                <li><a href="#">opção 3</a></li>
+                <li><a href="#">opção 4</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
@@ -64,14 +70,6 @@
           </div>
         </div>
       </div>
-
-      <div class="wave-separador">
-        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path
-            d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
-            class="shape-fill"></path>
-        </svg>
-      </div>
     </section>
     
     <!-- Modal -->
@@ -83,146 +81,44 @@
     <div class="separator-down"></div>
     
     <section id="planos" class="section">
-      <div class="container">
+      <div class="titulo">
         <h2>Planos e Preços</h2>
-        <p>
+        <span class="separador"></span>
+        <p class="subtitulo">
           Veja nossos planos disponíveis e escolha o melhor para você.
         </p>
       </div>
-      <button id="btn-plano">Plano: Premium</button>
       <div>
         <button class="button-accessibility" onclick="modifierFont()"><img class="image-button"
             src="src/assets/img/icons/icon-Aa.svg"></button>
       </div>
       <div class="planos conteudo">
+        <div id="tipos-btn">
+          <button id="btn-plano">Plano: Premium</button>
+        </div>
         <!-- CARDS Valores-->
         <div id="plano-normal" class="card">
           <div class="conteudo">
-            <div class="cabecalho">
-              <h5>Gratuito</h5>
-              <div class="descricao">
-                <p><strong>Sistema de pedidos essencial, com pedidos pelo WhatsApp</strong></p>
-              </div>
-              <div>
-                <div>
-                  <span class="preco"><strong>R$ 0,00 / mês</strong></span>
-                </div>
-              </div>
-              <button class="btn-card-plano" type="button">
-                Começe agora
-              </button>
-            </div>
-            <div>
-              <div class="lista">
-                <p><b>O plano gratuito inclui:</b></p>
-                <ul>
-                  <li>
-                    <object class="icon-verificacao" type="image/svg+xml"
-                      data="src/assets/img/icons/icon-verificacao.svg"></object>
-                    Cardapio padrão segmento
-                  </li>
-                  <li>
-                    <object class="icon-verificacao" type="image/svg+xml"
-                      data="src/assets/img/icons/icon-verificacao.svg"></object>
-                    Pedidos Limitados
-                  </li>
-                  <li>
-                    <object class="icon-verificacao" type="image/svg+xml"
-                      data="src/assets/img/icons/icon-verificacao.svg"></object>
-                    Painel de Vendas
-                  </li>
-                  <li>
-                    <object class="icon-verificacao" type="image/svg+xml"
-                      data="src/assets/img/icons/icon-verificacao.svg"></object>
-                    Tela de Preparo
-                  </li>
-                  <li><object class="icon-verificacao" type="image/svg+xml"
-                      data="src/assets/img/icons/icon-verificacao.svg"></object>
-                    Módulo Balcão <span class="claro">(Venda)</span></li>
-                  <li>
-                    <object class="icon-verificacao" type="image/svg+xml"
-                      data="src/assets/img/icons/icon-verificacao.svg"></object>
-                    Suporte pelo WhatsApp
-                  </li>
-                </ul>
-              </div>
+            <div class="info">
+              <h5>Plano: Padrão</h5>
+              <p>Plano para os Sem grana.</p>
             </div>
           </div>
         </div>
 
         <div id="plano-premium" class="card">
           <div class="conteudo">
-            <div class="cabecalho">
-              <h5>Premium</h5>
-              <div class="descricao">
-                <p>
-                  Automatize os processos do seu negócio com operação de
-                  caixa, pedidos, estoque e muito mais
-                </p>
-              </div>
-              <div>
-                <div>
-                  <span class="preco"><strong>R$ 35,50 / mês </strong></span>
-                </div>
-              </div>
-              <button class="btn-card-plano" type="button">
-                Assine agora
-              </button>
-            </div>
-            <div>
-              <div class="lista">
-                <p><b>Todas as vantagens do plano Gratuito e mais: </b></p>
-                <ul>
-                  <li>
-                    <object class="icon-verificacao" type="image/svg+xml"
-                      data="src/assets/img/icons/icon-verificacao.svg"></object>
-                    Cardapio personalizado
-                  </li>
-                  <li>
-                    <object class="icon-verificacao" type="image/svg+xml"
-                      data="src/assets/img/icons/icon-verificacao.svg"></object>
-                    Pedidos <strong>Ilimitados</strong>
-                  </li>
-                  <li>
-                    <object class="icon-verificacao" type="image/svg+xml"
-                      data="src/assets/img/icons/icon-verificacao.svg"></object>
-                    Cadastro de Clientes
-                  </li>
-                  <li>
-                    <object class="icon-verificacao" type="image/svg+xml"
-                      data="src/assets/img/icons/icon-verificacao.svg"></object>
-                    Operação de Caixa
-                  </li>
-                  <li>
-                    <object class="icon-verificacao" type="image/svg+xml"
-                      data="src/assets/img/icons/icon-verificacao.svg"></object>
-                    Modulos Comandos <span class="claro">(Agendamento)</span>
-                  </li>
-                  <li>
-                    <object class="icon-verificacao" type="image/svg+xml"
-                      data="src/assets/img/icons/icon-verificacao.svg"></object>
-                    Diferentes formas de pagamentos
-                  </li>
-                  <li>
-                    <object class="icon-verificacao" type="image/svg+xml"
-                      data="src/assets/img/icons/icon-verificacao.svg"></object>
-                    Histórico de pedidos
-                  </li>
-                  <li>
-                    <object class="icon-verificacao" type="image/svg+xml"
-                      data="src/assets/img/icons/icon-verificacao.svg"></object>
-                    Controle de estoque dos produtos
-                  </li>
-                </ul>
-              </div>
+            <div class="info">
+              <h5>Plano: Premium</h5>
+              <p>Plano pago para os ricos boladão</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-    
+
     <div class="separator-triangle"></div>
-    
+
     <section id="contato" class="section">
       <div class="container">
         <h2>Contato e Suporte</h2>
@@ -232,46 +128,20 @@
         <p>Use o formulário abaixo ou encontre-nos nas redes sociais.</p>
       </div>
     </section>
-
-
-    <div id="circularMenu" class="circular-menu ativo">
-      <a class="btn" onclick="document.getElementById('circularMenu').classList.toggle('ativo');">
-        <i class="fa fa-plus"></i>
-      </a>
-      <span class="items-menu">
-        <a href="#" class="menu-item fa fa-home"></a>
-        <a href="#" class="menu-item fa fa-user"></a>
-        <a href="#" class="menu-item fa fa-pie-chart"></a>
-        <a href="#" class="menu-item fa fa-cog"></a>
-        </menu>
-    </div>
-
-    <div class="footer-separador">
-    </div>
-
   </main>
-  <footer>
-    <div class="container">
-      <div class="colunas">
-        <div class="sociais-links">
-          <a alt="Link para o Facebook" class="fa-brands fa-facebook" href="#facebook"></a>
-          <a alt="Link para o Instagram" class="fa-brands fa-instagram" href="#istagram"></a>
-          <a alt="Link para o Instagram" class="fa-brands fa-linkedin" href="#istagram"></a>
-        </div>
-      </div>
-      <div class="colunas">
-        <div class="infos">
-          <a href="#links">Termos e condições</a>
-          <a href="#links">Contato</a>
-          <a href="#links">Privacidade</a>
-        </div>
-        <div class="infos">
-          <a href="#links"></a>
-        </div>
-      </div>
+  <footer id="footer">
+    <div class="footer-divisoes">
+      <h3>Redes Sociais 1</h3>
+      <p>Conteúdo da primeira seção do footer.</p>
     </div>
-    <div class="copyright">
+
+    <div class="footer-divisoes">
       <p>&copy; 2024 Os Rapazes - Todos os direitos reservados</p>
+    </div>
+
+    <div class="footer-divisoes">
+      <h3>Outra Coisa - Titulo</h3>
+      <p>PlaceHolder</p>
     </div>
   </footer>
 

@@ -1,47 +1,67 @@
-window.onload = function () {
-  var navCheck = document.getElementById('nav-check');
-  var nav = document.querySelector('.nav');
+// MENU MOBILE DROPDOWN
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById("menu-toggle");
+  const nav = document.getElementById("nav");
 
-  navCheck.addEventListener('change', function () {
-    if (this.checked) {
-      nav.style.backgroundColor = 'var(--main-color)';
-    } else {
-      nav.style.backgroundColor = '';
+  menuToggle.addEventListener("click", function () {
+    nav.classList.toggle("active");
+  });
+});
+
+// BOTÃO TOGGLE
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdownButton = document.getElementById("dropdownBotao");
+  const dropdownContent = document.getElementById("dropdownConteudo");
+
+  dropdownButton.addEventListener("click", function () {
+    dropdownContent.classList.toggle("show");
+  });
+
+  window.addEventListener("click", function (event) {
+    if (!event.target.matches(".dropdown-botao")) {
+      if (dropdownContent.classList.contains("show")) {
+        dropdownContent.classList.remove("show");
+      }
     }
   });
-};
+});
 
+// BOX SHADOW NO MENU
 window.addEventListener("scroll", function () {
-  var nav = document.querySelector(".nav");
+  var topBar = document.querySelector(".top-bar");
   if (window.scrollY > 50) {
-    nav.classList.add("sombra");
+    topBar.classList.add("shadow");
   } else {
-    nav.classList.remove("sombra");
+    topBar.classList.remove("shadow");
   }
 });
 
-function modificaCard() {
-  document.getElementById("btn-plano").addEventListener("click", function () {
-    var cardNormal = document.getElementById("plano-normal");
-    var cardPremium = document.getElementById("plano-premium");
-    var btnText = document.getElementById("btn-plano");
 
-    if (cardNormal.style.display === "none") {
-      cardNormal.style.display = "flex";
-      cardPremium.style.display = "none";
-      btnText.textContent = "Plano: Premium";
+function modificaCard() {
+  document.getElementById('btn-plano').addEventListener('click', function () {
+    var cardNormal = document.getElementById('plano-normal');
+    var cardPremium = document.getElementById('plano-premium');
+    var btnText = document.getElementById('btn-plano');
+
+    if (cardNormal.style.display === 'none') {
+      cardNormal.style.display = 'block';
+      cardPremium.style.display = 'none';
+      btnText.textContent = 'Plano: Premium';
     } else {
-      cardNormal.style.display = "none";
-      cardPremium.style.display = "flex";
-      btnText.textContent = "Plano: Gratis";
+      cardNormal.style.display = 'none';
+      cardPremium.style.display = 'block';
+      btnText.textContent = 'Plano: Padrão';
     }
-    window.addEventListener("resize", function () {
+    window.addEventListener('resize', function () {
+      // Pega o tamanho da tela
       var largura = window.innerWidth;
+      var altura = window.innerHeight;
 
       if (largura >= 770) {
-        cardNormal.style.display = "flex";
-        cardPremium.style.display = "flex";
+        cardNormal.style.display = 'block';
+        cardPremium.style.display = 'block';
       }
+
     });
   });
 }
