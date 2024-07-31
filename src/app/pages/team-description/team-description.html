@@ -1,41 +1,150 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Equipe de Desenvolvimento">
-    <link rel="stylesheet" href="../../../../style/style.css">
+    <link rel="stylesheet" href="../../../../style/root.css">
+    <link rel="stylesheet" href="team-description.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../../../../style/main.css" />
     <title>Sobre a Equipe</title>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <div class="container">
-                <h1>Equipe de Desenvolvimento</h1>
+    <header class="top-bar">
+        <div class="container">
+            <nav class="navigation" id="nav">
                 <ul>
-                    <li><a href="../../../../index.html">Página Inicial</a></li>
+                    <li><a href="../../../../index.html">Início</a></li>
+                    <a class="button-theme" onclick="modifierTheme()"><img class="image-button-moon" id="icon-moon"
+                            src="../../../../src/assets/img/icons/icon-moon.svg"></a>
                 </ul>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
 
+    <button class="button-accessibility" onclick="modifierFont()"><img class="image-button"
+        src="../../../../src/assets/img/icons/icon-Aa.svg"></button>
     <section id="equipe" class="section">
         <div class="container">
-            <h2>Nossa Equipe</h2>
-            <div class="member">
-                <h3>Nome do Membro</h3>
-                <p>Cargo ou Função</p>
-                <p>Breve descrição ou biografia.</p>
+            <div class="team-row">
+                <div class="member">
+                    <img src="../../../assets/img/mateusBack.png" alt="Mateus Back">
+                    <div class="member-info">
+                        <h3>Mateus Back</h3>
+                        <p>Scrum Master</p>
+                        <p>24 anos de idade. Desenvolvedor da Nextage, Junior II, cursando 3° Ano de Engenharia de
+                            Software no Instituto Federal do Paraná - Campus Paranavaí, graduado em Administração de
+                            Empresas pela Unespar - Universidade Estadual do Paraná. Técnico em informática pelo
+                            Instituto Federal do Paraná. Experiência em Dot.Net, Java, Ruby, Postgres.</p>
+                    </div>
+                    <div class="member-icons">
+                        <a href="mailto:mateusfback14@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="https://github.com/mateusback" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="member">
+                    <img src="../../../assets/img/luis.png" alt="Luís">
+                    <div class="member-info">
+                        <h3>Luís</h3>
+                        <p>Product Owner</p>
+                        <p>21 anos de idade. Analista de Teste da AiQFome, cursando 3° Ano de Engenharia de Software no
+                            Instituto Federal do Paraná - Campus Paranavaí. Experiência em C#, JavaScript, React,
+                            Angular. Formação do Ensino Médio Integral com T.I. no IFPR.</p>
+                    </div>
+                    <div class="member-icons">
+                        <a href="mailto:luislipeaz@hotmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="https://github.com/luisazvd" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
             </div>
-            
+
+            <div class="team-row">
+                <div class="member">
+                    <img src="../../../assets/img/gugas.jpeg" alt="Gustavo Lopes Feitosa">
+                    <div class="member-info">
+                        <h3>Gustavo Lopes Feitosa</h3>
+                        <p>Desenvolvedor</p>
+                        <p>19 anos de idade. Desenvolvedor da Nextage, Junior II, cursando 3° Ano de Engenharia de
+                            Software no Instituto Federal do Paraná - Campus Paranavaí. Experiência em Java, C#,
+                            JavaScript, React, Angular, Python e conceito de estruturas de projeto com ferramentas de
+                            diagramas e fluxo do sistema.</p>
+                    </div>
+                    <div class="member-icons">
+                        <a href="mailto:gustavolopesfeitosa1707@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="https://github.com/GustavoLopes2" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="member">
+                    <img src="../../../assets/img/rubens.png" alt="Rubens Matheus">
+                    <div class="member-info">
+                        <h3>Rubens Matheus</h3>
+                        <p>Desenvolvedor</p>
+                        <p>19 anos de idade. Cursando 3° Ano de Engenharia de Software no Instituto Federal do Paraná -
+                            Campus Paranavaí. Experiência em Java, C, Python, Mysql e Postgres.</p>
+                    </div>
+                    <div class="member-icons">
+                        <a href="mailto:rubensmatheus1009@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="https://github.com/RubensMatheus-me" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-row">
+                <div class="member">
+                    <img src="../../../assets/img/daniel.jpeg" alt="Daniel Leite">
+                    <div class="member-info">
+                        <h3>Daniel Leite</h3>
+                        <p>Desenvolvedor</p>
+                        <p>23 anos de idade. Cursando 3° Ano de Engenharia de Software no Instituto Federal do Paraná -
+                            Campus Paranavaí. Possui conhecimento nas seguintes tecnologias: Java, Spring Boot, Mysql,
+                            Python.</p>
+                    </div>
+                    <div class="member-icons">
+                        <a href="mailto:daniellcs04@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="https://github.com/dnllcs" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="member">
+                    <img src="../../../assets/img/joao.jpeg" alt="João Marcos">
+                    <div class="member-info">
+                        <h3>João Marcos</h3>
+                        <p>Desenvolvedor</p>
+                        <p>25 anos de idade. Cursando 3° Ano de Engenharia de Software no Instituto Federal do Paraná -
+                            Campus Paranavaí. Experiência em Python, React, Java, Typescript, Django, JavaScript,
+                            Postgres, BootStrap, CSS, HTML.</p>
+                    </div>
+                    <div class="member-icons">
+                        <a href="mailto:joaomarcosp.sza@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="https://github.com/joaomarcosp-souza" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Nome da Equipe - Todos os direitos reservados</p>
+    <footer id="footer">
+        <div class="footer-divisoes">
+            <h3>Redes Sociais 1</h3>
+            <p>Conteúdo da primeira seção do footer.</p>
+        </div>
+
+        <div class="footer-divisoes">
+            <p>&copy; 2024 Os Rapazes - Todos os direitos reservados</p>
+        </div>
+
+        <div class="footer-divisoes">
+            <h3>Outra Coisa - Titulo</h3>
+            <p>PlaceHolder</p>
         </div>
     </footer>
+    <script src="../../../app/pages/index/index.js"></script>
 </body>
+
 </html>
