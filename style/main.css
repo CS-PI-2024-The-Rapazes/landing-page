@@ -386,3 +386,48 @@ main {
   }
 
 }
+
+.contato-button-div {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  background: rgba(128, 0, 128, 0);
+  color: white;
+  font-weight: 500;
+  display: flex;
+  justify-content: right;
+  gap: 0.2rem;
+}
+
+.contato-button {
+  position: fixed;
+  border-radius: 50px;
+  border-style: none;
+  color: #FFFFFF;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 50px;
+  width: 50px;
+  line-height: 20px;
+  text-align: center;
+  transition: color 100ms;
+  vertical-align: baseline;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#comece-agora-img {
+  width: 50px;
+  height: 50px;
+}
+
+#comece-agora-img:hover {
+  transform: scale(1.3);
+}
