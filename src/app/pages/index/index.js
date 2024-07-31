@@ -1,17 +1,12 @@
 window.onload = function () {
   var navCheck = document.getElementById('nav-check');
   var nav = document.querySelector('.nav');
-  var icone = document.querySelector('.icone');
-  var labelMenu = document.querySelector('.label-menu');
 
   navCheck.addEventListener('change', function () {
     if (this.checked) {
       nav.style.backgroundColor = 'var(--main-color)';
-      icone.style.background = 'var(--background-light)';
     } else {
       nav.style.backgroundColor = '';
-      icone.style.backgroundColor = '';
-      labelMenu.style.backgroundColor = '';
     }
   });
 };
@@ -38,7 +33,7 @@ function modificaCard() {
     } else {
       cardNormal.style.display = "none";
       cardPremium.style.display = "flex";
-      btnText.textContent = "Plano: Padrão";
+      btnText.textContent = "Plano: Gratis";
     }
     window.addEventListener("resize", function () {
       var largura = window.innerWidth;

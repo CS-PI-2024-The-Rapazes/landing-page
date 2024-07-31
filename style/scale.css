@@ -50,7 +50,7 @@
 
     .nav .icone {
         height: 1.24rem;
-        border-top: 0.130rem solid var(--main-color);
+        border-top: solid var(--main-color);
         width: 1.25rem;
     }
 
@@ -59,11 +59,10 @@
         content: " ";
         display: block;
         width: 1.25rem;
-        height: 0.15rem;
-        background: var(--main-color);
         margin-top: 0.3125rem;
         position: relative;
         transition: 0.3s;
+        border-top: solid var(--main-color);
     }
 
     .nav #nav-check:checked~.menu-mobile {
@@ -79,11 +78,13 @@
 
     .nav #nav-check:checked~.label-menu .icone::before {
         transform: rotate(135deg);
+        border-top: solid var(--background-light);
     }
 
     .nav #nav-check:checked~.label-menu .icone::after {
-        transform: rotate(-135deg);
         top: -0.4375rem;
+        transform: rotate(-135deg);
+        border-top: solid var(--background-light);
     }
 
     .card {
@@ -138,6 +139,6 @@
     .nav.sombra .icone,
     .nav.sombra .icone::after,
     .nav.sombra .icone::before {
-        border-top: 0.130rem solid var(--background-light);
+        border-top: solid var(--background-light);
     }
 }
