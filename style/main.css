@@ -318,12 +318,13 @@ main {
 
 .button-accessibility {
   background-color: var(--accessibility-background-color);
-  border: 0.06em solid var(--main-color);
+  border: 0.06em solid black;
   cursor: pointer;
   border-radius: 0.2em;
   position: fixed;
   margin: auto;
   right: 1em;
+  bottom: 45em;
   z-index: 5;
   padding: 9px 14px;
 }
@@ -381,6 +382,7 @@ main {
   }
   .button-accessibility {
     background-color: var(--main-color );
+    bottom: 35em;
   }
 
 }
